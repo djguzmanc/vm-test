@@ -14,12 +14,12 @@ function promisifyAjax(ajaxConfig) {
 
 var PlayerService = {
   getPlayerTeamId: function (playerId) {
-    promisifyAjax({
+    return promisifyAjax({
       url: "/player/" + playerId + "/team",
     });
   },
   getPlayers: function (teamId) {
-    promisifyAjax({
+    return promisifyAjax({
       url: "/team/" + teamId + "/player",
     });
   }
